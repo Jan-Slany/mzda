@@ -1,0 +1,2 @@
+# mzda
+výpočet čisté mzdy
