@@ -93,6 +93,7 @@ while run:
 	except Exception as e:
 		print(e)
 
+	# Možnost počítat dál
 	again = input("Chceš počítat dál? ").lower()
 
 	if again != "ano":
