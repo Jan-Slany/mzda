@@ -71,6 +71,7 @@ while run:
 	# Výpočet
 	try:
 		cistaMzda = hrubaMzda - zprijmu - socialni - zdravotni
+		rocniMzda = cistaMzda * 12
 
 	except NameError as e:
 		print("Nebyl zadán potřebný údaj!")
@@ -81,6 +82,7 @@ while run:
 	try:
 		table = PrettyTable(["čistá mzda:", math.ceil(cistaMzda)])
 
+		table.add_row(["roční čistá mzda:", math.ceil(rocniMzda)])
 		table.add_row(["hrubá mzda:", hrubaMzda])
 		table.add_row(["daň:", math.ceil(zprijmu)])
 		table.add_row(["sociální pojištění:", math.ceil(socialni)])
@@ -93,7 +95,6 @@ while run:
 	except Exception as e:
 		print(e)
 
-	# Možnost počítat dál
 	again = input("Chceš počítat dál? ").lower()
 
 	if again != "ano":
